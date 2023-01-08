@@ -1,4 +1,15 @@
 <h1>This is home component</h1>
+Brand: <select id="brand" (change)="changeBrand($event)">
+    <option *ngFor="let comp of companies">
+        {{comp.brandName}}
+    </option>
+</select>
+<br>
+Games: <select id="game">
+    <option *ngFor="let game of games">
+        {{game}}            
+    </option>
+</select>
 
 
     

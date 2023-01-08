@@ -6,13 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  
-  public age = 88;
-  public fruits = ['apple','orange','grapes'];
-  public objectFruits = [{name: 'apple', price: 5},{name: 'orange', price: 10},{name: 'grapes', price: 8}];
+
+  public games: string[] = [];
+  public companies = [
+    { brandName: 'Select a brand', games: []},
+    {
+      brandName: 'Sony',
+      games: [
+        'God of War',
+        'Horizon',
+        'Spider Man'
+      ]
+    },
+    {
+      brandName: 'FromSoftware',
+      games: [
+        'Elden Ring',
+        'Sekiro',
+        'Dark Soul'
+      ]
+    }
+  ];
 
   ngOnInit(): void {
-     console.log(this.fruits)
+     
+  }
+
+  public changeBrand(event: any){
+    const brand = event.target.value;
+    if(!brand){
+      return;
+    }
+    this.games = this.companies.find(data => data.brandName === brand)?.games || [];
   }
 
 }
