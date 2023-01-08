@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit{
   
-  public name = 'pham khanh toan';
-  
+  public age = 88;
+  public fruits = ['apple','orange','grapes'];
+  public objectFruits = [{name: 'apple', price: 5},{name: 'orange', price: 10},{name: 'grapes', price: 8}];
+
   ngOnInit(): void {
-     
+     console.log(this.fruits)
   }
+
 }

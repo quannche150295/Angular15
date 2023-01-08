@@ -4,3 +4,14 @@
     box-shadow: 5px 10px black;
     width: 200px;
 }
+.table, td, th{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+th{
+    min-width: 100px;
+}
+
+.negative{
+    color: red;
+}
