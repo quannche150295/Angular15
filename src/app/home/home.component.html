@@ -1,26 +1,4 @@
-
-<input type="text" [(ngModel)]="age"/>
-<p class="box">tuoi cua ban la {{age}}</p> 
-<br>
-<div *ngIf="age <= 18; then tre; else gia">
-
-</div>
-<ng-template #tre><h2>Trẻ</h2></ng-template>
-<ng-template #gia><h2>Già</h2></ng-template>
-<div *ngFor="let fruit of fruits; let i = index">
-    <li>{{i+1}}. {{fruit}}</li>
-</div>
-<br>
-<table class="table">
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-    </tr>
-    <tr *ngFor="let fruit of objectFruits">
-        <td>{{fruit.name}}</td>
-        <td><span [ngClass]="{'negative':fruit.price<0}">{{fruit.price}}</span></td>
-    </tr>
-</table>
+<h1>This is home component</h1>
 
 
     
