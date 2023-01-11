@@ -9,7 +9,7 @@ export class CommonService {
   public square(n: number): number{
     return n*n;
   }
-  public submitData(data: string): void{
+  public submitData(data: object): void{
     console.log('Data: ', data);
   }
   constructor() { }

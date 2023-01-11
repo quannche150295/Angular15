@@ -10,7 +10,7 @@ export class TemplateDrivenFormComponent {
   public name = "";
   public submitForm(): void{
     console.log('submit form: name = '+this.name);
-    this.common.submitData(this.name);
+    // this.common.submitData(this.name);
   }
   constructor(private common: CommonService){
 
