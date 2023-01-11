@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+
+  public counter = 0;
+  public counterSquare = 0;
+  constructor(private common:CommonService){}
 
   public games: string[] = [];
   public companies = [
@@ -29,7 +34,9 @@ export class HomeComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-     
+    this.counter = this.common.counter;
+    this.counterSquare = this.common.square(this.counter);
+    this.common.counter++;
   }
 
   public changeBrand(event: any){
